@@ -11,7 +11,7 @@
     </div>
 
     <main v-if="!search">
-      <h1>Hi, <strong>Megmed AI Faith</strong></h1>
+      <h1>Hi, <strong>Megmed AI Faith</strong> 👋</h1>
       <section>
         <div>
           <h3>Discover new book</h3>
@@ -61,7 +61,7 @@
         />
 
         <div v-for="book in books" :key="book.id">
-          <div @click="navigate(book.id)">
+          <div class="book" @click="navigate(book.id)">
             <img
               :src="book.volumeInfo.imageLinks?.thumbnail || defaultImage"
               alt="Thumbnail not provided"
@@ -190,6 +190,7 @@ export default {
         display: flex;
         overflow-x: auto;
         margin-right: -20px;
+        justify-content: start;
         img {
           border-radius: 5px;
           margin-right: 10px;
@@ -202,10 +203,11 @@ export default {
       }
       .currently-reading {
         background: url("../assets/reading.png");
+
         margin-left: -20px;
         display: flex;
-        background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
         align-items: center;
         justify-content: flex-start;
         > div {
@@ -248,7 +250,6 @@ export default {
         }
       }
       .reviews-img {
-        width: 100%;
         height: 181px;
         border-radius: 5px;
         margin-right: 10px;
@@ -260,7 +261,11 @@ export default {
     padding: 0 20px 80px;
     display: flex;
     flex-direction: column;
-
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     > div {
       display: grid;
       margin-bottom: 20px;
