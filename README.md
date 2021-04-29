@@ -1,24 +1,12 @@
-# overbooked
+# Overbooked 📚
 
-## Project setup
-```
-yarn install
-```
+## :information_source: Como usar
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+```bash
 
-### Compiles and minifies for production
-```
-yarn build
-```
+# Instale as dependências
+$ npm install
 
-### Lints and fixes files
+# Rode localmente https://localhost:3000
+$ npm start
 ```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
